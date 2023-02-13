@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hamburger */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bot {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-mid {
+  transform: translateY(7px);
+}
+
+.hamburger-bot {
+  transform: translateY(14px);
+  background: #000;
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #000;
+}
+
+.open .hamburger-mid {
+  display: none;
+}
+
+.open .hamburger-bot {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #000;
+}
+
+/* Videos */
+
+#videos:hover .video:not(:hover) {
+  filter: grayscale(100%) blur(4px);
+  opacity: 0.75;
+}
+
+.video-content {
+  @apply absolute top-0 right-0 left-0 h-full flex justify-center items-center overflow-hidden;
+}

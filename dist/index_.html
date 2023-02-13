@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>GFit - Klub Fitness i Siłownia 24/7</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="nav-bar">
+      <!-- Nav Container -->
+      <div class="bg-red-700 border-b-2 border-gray-200 shadow-lg">
+        <div class="max-w-screen-2xl mx-auto flex items-center justify-between">
+          <!-- Logo -->
+          <a href="#" class="block hover:scale-105 duration-200"
+            ><img src="./images/logo-black.svg" alt="" class="w-36 p-2"
+          /></a>
+          <!-- Navigation -->
+          <div
+            class="hidden md:flex text-lg items-center justify-center space-x-8 px-6 py-4 my-2"
+          >
+            <div class="group">
+              <a href="#">O Nas</a>
+              <div
+                class="group-hover:border-b group-hover:border-red-500"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Oferta</a>
+              <div
+                class="group-hover:border-b group-hover:border-red-500"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Zajęcia</a>
+              <div
+                class="group-hover:border-b group-hover:border-red-500"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Praca</a>
+              <div
+                class="group-hover:border-b group-hover:border-red-500"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Kontakt</a>
+              <div
+                class="group-hover:border-b group-hover:border-red-500"
+              ></div>
+            </div>
+          </div>
+          <!-- @todo Hamburger -->
+        </div>
+        <!-- @todo Hamburger Menu -->
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container flex items-center justify-between mx-auto">
+        <!-- Videos Container -->
+        <div class="mt-32">
+          <div
+            class="hidden md:grid grid-cols-2 grid-rows-2 rotate-45 scale-90"
+          >
+            <video
+              src="./video/mats.mp4"
+              class="w-[300px] h-[300px] object-cover -rotate-45 clip-vide scale-125"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              src="./video/dumbbells.mp4"
+              class="w-[300px] h-[300px] object-cover -rotate-45 clip-vide scale-125"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              src="./video/talc.mp4"
+              class="w-[300px] h-[300px] object-cover -rotate-45 clip-vide scale-125"
+              autoplay
+              muted
+              loop
+            ></video>
+            <video
+              src="./video/girl.mp4"
+              class="w-[300px] h-[300px] object-cover -rotate-45 clip-vide scale-125"
+              autoplay
+              muted
+              loop
+            ></video>
+          </div>
+        </div>
+        <!-- Card  -->
+        <div
+          class="w-1/2 flex flex-col space-y-4 rounded-lg shadow-2xl mx-auto p-6"
+        >
+          <p class="text-red-500 text-sm">0 zł Opłaty Członkowskiej</p>
+          <h1 class="text-center text-2xl font-semibold md:text-left">
+            Kup Karnet Online
+          </h1>
+          <p>Zacznij ćwiczyć z nami!</p>
+
+          <button
+            class="bg-red-500 w-32 rounded-full p-3 text-white hover:bg-red-600"
+          >
+            Kup Teraz!
+          </button>
+          <button
+            class="bg-white border-2 border-red-500 rounded-full p-3 text-black"
+          >
+            Spotkanie wprowadzające
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

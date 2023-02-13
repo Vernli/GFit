@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script -->
+    <script src="./js/script.js" defer></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>GFit - Klub Fitness i Siłownia 24/7</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <!-- Navigation Container -->
+      <div
+        class="max-w-full bg-white shadow-2xl border-b-1 border-gray-500 flex items-center justify-center"
+      >
+        <!-- Items Container -->
+        <div
+          class="w-full flex items-center justify-between lg:mx-10 px-3 py-2 md:py-4 lg:py-6"
+        >
+          <!-- Logo -->
+          <a href="#"
+            ><img
+              src="./images/logo-black.svg"
+              alt=""
+              class="w-24 lg:w-28 hover:scale-105 duration-200"
+          /></a>
+
+          <!-- Nav-links -->
+          <div
+            class="hidden md:flex items-center space-x-3 lg:space-x-6 md:text-md lg:text-xl px-4 lg:ml-[100px] uppercase text-gray-500"
+          >
+            <div class="group">
+              <a href="#" class="tracking-widest group-hover:text-red-400"
+                >O Nas</a
+              >
+              <div
+                class="w-0 h-0.5 bg-black duration-300 group-hover:w-full"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#" class="tracking-widest group-hover:text-red-400"
+                >Oferta</a
+              >
+              <div
+                class="w-0 h-0.5 bg-black duration-300 group-hover:w-full"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#" class="tracking-widest group-hover:text-red-400"
+                >Zajęcia</a
+              >
+              <div
+                class="w-0 h-0.5 bg-black duration-300 group-hover:w-full"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#" class="tracking-widest group-hover:text-red-400"
+                >Praca</a
+              >
+              <div
+                class="w-0 h-0.5 bg-black duration-300 group-hover:w-full"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#" class="tracking-widest group-hover:text-red-400"
+                >Kontakt</a
+              >
+              <div
+                class="w-0 h-0.5 bg-black duration-300 group-hover:w-full"
+              ></div>
+            </div>
+          </div>
+          <!-- Buttons -->
+          <div
+            class="flex items-center justify-end p-2 space-x-2 md:space-x-3 lg:space-x-6 text-lg"
+          >
+            <!-- Log In -->
+            <button
+              class="group relative h-7 lg:h-10 w-24 lg:w-36 overflow-hidden border border-black rounded-full bg-white text-sm lg:text-lg shadow hover:shadow-lg"
+            >
+              <div
+                class="absolute inset-0 h-0 bg-red-300 tranistiion-all duration-[500ms] ease group-hover:h-full"
+              ></div>
+              <span class="relative text-gray-500">Zaloguj się</span>
+            </button>
+            <!-- Dołącz do klubu -->
+            <button
+              class="group relative hidden md:block h-7 lg:h-10 w-24 lg:w-40 overflow-hidden border border-black rounded-full bg-red-400 text-sm lg:text-lg shadow hover:shadow-lg;"
+            >
+              <div
+                class="absolute inset-0 h-0 bg-red-300 tranistiion-all duration-[500ms] ease group-hover:h-full"
+              ></div>
+              <span class="relative text-white group-hover:text-gray-500"
+                >Dołącz do Nas</span
+              >
+            </button>
+            <!-- Hamburger Buttton -->
+            <button
+              id="menu-btn"
+              class="mt-2 z-30 block md:hidden focus:outline-none hamburger"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-mid"></span>
+              <span class="hamburger-bot"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Hamburger Menu -->
+      <div
+        id="menu"
+        class="fixed inset-0 z-20 flex-col items-center justify-center self-end w-full h-full m-h-screen px-6 py-1 pb-4 tracking-widest text-black bg-gradient-to-bl from-white to-gray-700 uppercase hidden"
+      >
+        <!-- Logo -->
+        <img src="./images/logo-black.svg" alt="" class="w-32 mb-10" />
+
+        <div class="w-full py-3 text-center">
+          <a
+            href="#"
+            class="block hover:scale-125 hover:text-red-400 transition-all ease-in duration-300"
+            >O Nas</a
+          >
+        </div>
+        <div class="w-full py-3 text-center">
+          <a
+            href="#"
+            class="block hover:scale-125 hover:text-red-400 transition-all ease-in duration-300"
+            >Oferta</a
+          >
+        </div>
+        <div class="w-full py-3 text-center">
+          <a
+            href="#"
+            class="block hover:scale-125 hover:text-red-400 transition-all ease-in duration-300"
+            >Zajęcia</a
+          >
+        </div>
+        <div class="w-full py-3 text-center">
+          <a
+            href="#"
+            class="block hover:scale-125 hover:text-red-400 transition-all ease-in duration-500"
+            >Kontakt</a
+          >
+        </div>
+        <!-- LogIn & Karnet -->
+        <div class="mt-5 flex space-x-6 text-lg">
+          <button
+            class="group relative h-10 lg:h-12 w-32 lg:w-40 overflow-hidden border border-black rounded-full bg-white text-lg shadow hover:shadow-lg;"
+          >
+            <div
+              class="absolute inset-0 h-0 bg-red-400 tranistiion-all duration-[500ms] ease group-hover:h-full"
+            ></div>
+            <span class="relative text-gray-500 group-hover:text-white"
+              >Zaloguj się</span
+            >
+          </button>
+          <button
+            class="group relative h-10 lg:h-12 w-32 lg:w-40 overflow-hidden border border-black rounded-full bg-white text-lg shadow hover:shadow-lg;"
+          >
+            <div
+              class="absolute inset-0 h-0 bg-red-400 tranistiion-all duration-[500ms] ease group-hover:h-full"
+            ></div>
+            <span class="relative text-gray-500 group-hover:text-white"
+              >Kup Karnet</span
+            >
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <!-- Hero Container -->
+      <div class="flex flex-col max-h-[75vh] bg-neutral-900">
+        <!-- Videos Container -->
+        <div id="videos" class="flex flex-col md:flex-row overflow-hidden z-10">
+          <!-- Video 1 -->
+          <div class="video max-w-full md:w-1/4">
+            <!-- Video -->
+            <div class="relative h-[75vh] md:h-[50vh] lg:h-[75vh]">
+              <video class="w-full h-full object-cover" autoplay loop muted>
+                <source src="./video/girl.mp4" />
+              </video>
+              <!-- Ovarlay -->
+              <div
+                class="absolute top-0 right-0 left-0 h-full bg-black opacity-30 hover:hidden mb-[100px]"
+              ></div>
+              <!-- Video Content -->
+              <!-- Mobile Left -->
+              <div
+                class="group absolute left-0 top-0 h-full w-16 flex items-center justify-center"
+              >
+                <div>
+                  <i
+                    class="relative fa-solid fa-chevron-left fa-3x text-gray-200 opacity-0 group-hover:opacity-100"
+                  ></i>
+                </div>
+              </div>
+              <!-- TEXT -->
+              <div
+                class="opacity-0 hover:opacity-100 duration-500 video-content"
+              >
+                <div
+                  class="text-gray-100 w-full text-center uppercase space-y-3 font-roboto"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center space-y-2"
+                  >
+                    <h1 class="text-5xl md:text-2xl lg:text-5xl tracking-wide">
+                      Plany Treningowe
+                    </h1>
+                    <p
+                      class="text-sm md:text-xs lg:text-sm tracking-wide font-thin"
+                    >
+                      Ułożymy idealny plan dla Ciebie
+                    </p>
+                  </div>
+
+                  <!-- BUTTON -->
+                  <button
+                    class="group text-center h-8 w-32 overflow-hidden border border-black rounded-lg bg-white text-sm shadow hover:shadow-lg"
+                  >
+                    <span
+                      class="inline-block text-gray-500 group-hover:scale-110 group-hover:text-red-400"
+                      >Sprawdź</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <!-- Mobile Right -->
+              <div
+                class="group absolute right-0 top-0 h-full w-16 flex items-center justify-center"
+              >
+                <div>
+                  <i
+                    class="relative fa-solid fa-chevron-right fa-3x text-gray-200 opacity-0 group-hover:opacity-100"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video 2 -->
+          <div class="video w-full md:w-1/4 hidden md:block">
+            <!-- Video -->
+            <div class="relative h-full">
+              <video class="w-full h-full object-cover" autoplay loop muted>
+                <source src="./video/dumbbells.mp4" />
+              </video>
+              <!-- Ovarlay -->
+              <div
+                class="absolute top-0 right-0 left-0 h-full bg-black opacity-30 hover:hidden"
+              ></div>
+              <!-- Video Content -->
+              <!-- TEXT -->
+              <div
+                class="opacity-0 hover:opacity-100 duration-500 video-content"
+              >
+                <div
+                  class="text-gray-100 stroke-black w-full text-center uppercase space-y-3 font-roboto"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center space-y-2"
+                  >
+                    <h1 class="text-5xl md:text-2xl lg:text-5xl tracking-wide">
+                      Siłownia
+                    </h1>
+                    <p
+                      class="text-sm md:text-xs lg:text-sm tracking-wide font-thin"
+                    >
+                      Czynna 24/7
+                    </p>
+                  </div>
+
+                  <!-- BUTTON -->
+                  <button
+                    class="group text-center h-8 w-32 overflow-hidden border border-black rounded-lg bg-white text-sm shadow hover:shadow-lg"
+                  >
+                    <span
+                      class="inline-block text-gray-500 group-hover:scale-110 group-hover:text-red-400"
+                      >Sprawdź</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video 3 -->
+          <div class="video w-full md:w-1/4 hidden md:block">
+            <!-- Video -->
+            <div class="relative h-full">
+              <video class="w-full h-full object-cover" autoplay loop muted>
+                <source src="./video/talc.mp4" />
+              </video>
+              <!-- Ovarlay -->
+              <div
+                class="absolute top-0 right-0 left-0 h-full bg-black opacity-30 hover:hidden"
+              ></div>
+              <!-- Video Content -->
+              <!-- TEXT -->
+              <div
+                class="opacity-0 hover:opacity-100 duration-500 video-content"
+              >
+                <div
+                  class="text-gray-100 stroke-black w-full text-center uppercase space-y-3 font-roboto"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center space-y-2"
+                  >
+                    <h1 class="text-5xl md:text-2xl lg:text-5xl tracking-wide">
+                      Trener Personalny
+                    </h1>
+                    <p
+                      class="text-sm md:text-xs lg:text-sm tracking-wide font-thin"
+                    >
+                      Dostęp do najlepszych specjalistów
+                    </p>
+                  </div>
+
+                  <!-- BUTTON -->
+                  <button
+                    class="group text-center h-8 w-32 overflow-hidden border border-black rounded-lg bg-white text-sm shadow hover:shadow-lg"
+                  >
+                    <span
+                      class="inline-block text-gray-500 group-hover:scale-110 group-hover:text-red-400"
+                      >Sprawdź</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video 4 -->
+          <div class="video w-full md:w-1/4 hidden md:block">
+            <!-- Video -->
+            <div class="relative h-full">
+              <video class="w-full h-full object-cover" autoplay loop muted>
+                <source src="./video/mats.mp4" />
+              </video>
+              <!-- Ovarlay -->
+              <div
+                class="absolute top-0 right-0 left-0 h-full bg-black opacity-30 hover:hidden"
+              ></div>
+              <!-- Video Content -->
+              <!-- TEXT -->
+              <div
+                class="opacity-0 hover:opacity-100 duration-500 video-content"
+              >
+                <div
+                  class="text-gray-100 stroke-black w-full text-center uppercase space-y-3 font-roboto"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center space-y-2"
+                  >
+                    <h1 class="text-5xl md:text-2xl lg:text-5xl tracking-wide">
+                      Sklep
+                    </h1>
+                    <p
+                      class="text-sm md:text-xs lg:text-sm tracking-wide font-thin"
+                    >
+                      odżywki i suplementy
+                    </p>
+                  </div>
+
+                  <!-- BUTTON -->
+                  <button
+                    class="group text-center h-8 w-32 overflow-hidden border border-black rounded-lg bg-white text-sm shadow hover:shadow-lg"
+                  >
+                    <span
+                      class="inline-block text-gray-500 group-hover:scale-110 group-hover:text-red-400"
+                      >Sprawdź</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
