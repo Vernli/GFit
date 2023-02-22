@@ -64,5 +64,5 @@
 }
 
 .video-content {
-  @apply absolute top-0 right-0 left-0 h-full flex justify-center items-center overflow-hidden;
+  @apply absolute top-0 right-0 left-0 h-full flex flex-col justify-center items-center overflow-hidden;
 }

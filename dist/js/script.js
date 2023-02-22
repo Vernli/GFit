@@ -15,10 +15,8 @@ button_right.addEventListener("click", videoToggleR);
 
 function videoToggleL() {
   if (current_video == 0) {
-    // Hide current
     videos[current_video].classList.toggle("hidden");
     current_video = 3;
-    // Show next
     videos[current_video].classList.toggle("hidden");
   } else if (current_video == 3) {
     videos[current_video].classList.toggle("hidden");
@@ -36,6 +34,7 @@ function videoToggleL() {
 }
 
 function videoToggleR() {
+  console.log(current_video);
   if (current_video == 0) {
     // Hide current
     videos[current_video].classList.toggle("hidden");
@@ -70,3 +69,5 @@ if (window.innerWidth < 780) {
     element.classList.add("opacity-100");
   });
 }
+
+console.log(videos);
