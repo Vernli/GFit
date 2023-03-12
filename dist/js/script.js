@@ -9,6 +9,7 @@ const button_right = document.getElementById("right");
 let current_video = 0;
 
 function videoToggleR() {
+  console.log(current_video);
   if (current_video == 0) {
     // Hide current
     videos[current_video].classList.toggle("hidden");
@@ -56,23 +57,27 @@ function navToggle() {
   menu.classList.toggle("hidden");
 }
 
-btn.addEventListener("click", navToggle);
+function Init() {
+  btn.addEventListener("click", navToggle);
 
-button_left.addEventListener("click", videoToggleL);
-button_right.addEventListener("click", videoToggleR);
+  button_left.addEventListener("click", videoToggleL);
+  button_right.addEventListener("click", videoToggleR);
 
-window.addEventListener("resize", (e) => {
-  if (e.target.innerWidth < 780 || e.target.innerHeight < 440) {
-    video_content.forEach((element) => {
-      element.classList.remove("hover:opacity-100");
-      element.classList.remove("opacity-0");
-      element.classList.add("opacity-100");
-    });
-  } else {
-    video_content.forEach((element) => {
-      element.classList.add("hover:opacity-100");
-      element.classList.add("opacity-0");
-      element.classList.remove("opacity-100");
-    });
-  }
-});
+  window.addEventListener("resize", (e) => {
+    if (e.target.innerWidth < 780 || e.target.innerHeight < 440) {
+      video_content.forEach((element) => {
+        element.classList.remove("hover:opacity-100");
+        element.classList.remove("opacity-0");
+        element.classList.add("opacity-100");
+      });
+    } else {
+      video_content.forEach((element) => {
+        element.classList.add("hover:opacity-100");
+        element.classList.add("opacity-0");
+        element.classList.remove("opacity-100");
+      });
+    }
+  });
+}
+
+Init();
