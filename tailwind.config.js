@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       screens: {
         sm: "375px",
-        md: "780px",
+        md: "920px",
         lg: "1280px",
         landscape: "(orientation: landscape)",
       },

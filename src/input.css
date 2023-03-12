@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .flex-row-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@layer components {
+  .video-content {
+    @apply absolute h-full top-0 right-0 left-0 flex-col-center items-center overflow-hidden duration-500;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .btn-wrap {
+    @apply absolute left-0 bottom-[15vh] right-0 h-1/4 w-full opacity-100 flex-row-center duration-500;
+  }
+
+  .btn-hero {
+    @apply text-center h-12 w-44 overflow-hidden border border-black rounded-lg bg-white text-lg shadow;
+  }
+
+  .btn-hero:hover {
+    @apply shadow-lg text-red-400;
+  }
+}
+
 /* Hamburger */
 .hamburger {
   cursor: pointer;
@@ -57,12 +84,7 @@
 }
 
 /* Videos */
-
 #videos:hover .video:not(:hover) {
   filter: grayscale(100%) blur(4px);
   opacity: 0.75;
-}
-
-.video-content {
-  @apply absolute top-0 right-0 left-0 h-full flex flex-col justify-center items-center overflow-hidden;
 }

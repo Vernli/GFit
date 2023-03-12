@@ -62,22 +62,6 @@ function Init() {
 
   button_left.addEventListener("click", videoToggleL);
   button_right.addEventListener("click", videoToggleR);
-
-  window.addEventListener("resize", (e) => {
-    if (e.target.innerWidth < 780 || e.target.innerHeight < 440) {
-      video_content.forEach((element) => {
-        element.classList.remove("hover:opacity-100");
-        element.classList.remove("opacity-0");
-        element.classList.add("opacity-100");
-      });
-    } else {
-      video_content.forEach((element) => {
-        element.classList.add("hover:opacity-100");
-        element.classList.add("opacity-0");
-        element.classList.remove("opacity-100");
-      });
-    }
-  });
 }
 
 Init();
