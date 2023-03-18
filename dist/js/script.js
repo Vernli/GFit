@@ -59,7 +59,6 @@ function navToggle() {
 
 function Init() {
   btn.addEventListener("click", navToggle);
-
   button_left.addEventListener("click", videoToggleL);
   button_right.addEventListener("click", videoToggleR);
 }
