@@ -45,6 +45,7 @@ function navToggle() {
   menu.classList.toggle("hidden");
 }
 
+// Init
 function Init() {
   menu_btn.addEventListener("click", navToggle);
   button_left.addEventListener("click", showVideo);
