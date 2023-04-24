@@ -15,7 +15,7 @@ module.exports = {
         darkRed: "cc0000",
       },
       boxShadow: {
-        shadowNews: "2px 0px 5px 5px rgba(66, 68, 90, 0.2)",
+        shadowNews: "2px 0px 3px 2px",
       },
     },
     fontFamily: {
