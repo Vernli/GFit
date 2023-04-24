@@ -33,6 +33,14 @@
   }
 }
 
+body {
+  @apply font-roboto;
+}
+
+li {
+  @apply border-b-2 border-black;
+}
+
 /* Hamburger */
 .hamburger {
   cursor: pointer;
