@@ -52,4 +52,7 @@ function Init() {
   button_right.addEventListener("click", showVideo);
 }
 
+const cards = document.querySelector(".cards");
+cards.addEventListener("scroll", (e) => {});
+
 Init();

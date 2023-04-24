@@ -380,157 +380,114 @@
     </section>
 
     <main>
-      <div class="relative w-full p-10 space-y-5">
-        <h1 class="text-4xl text-black tracking-wide">Aktualności:</h1>
-        <div class="grid grid-cols-4 gap-2 place-items-center">
-          <div class="w-5/6 h-56 flex border-2 rounded-2xl z-0">
+      <section id="news" class="w-full p-10 space-y-5 overflow-hidden">
+        <h1 class="text-4xl text-center md:text-left text-black tracking-wide">
+          Aktualności
+        </h1>
+        <!-- Cards -->
+        <div class="cards md:grid md:grid-cols-4 gap-2 place-items-center">
+          <!-- 1 -->
+          <div class="card w-5/6 h-56 flex border-2 rounded-2xl z-0 active">
             <img
               src="./images/Yoga.jpg"
               alt="yoga"
-              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20"
+              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20 md:hidden lg:block"
             />
 
             <div
-              class="relative rounded-2xl rounded-l-none p-4 h-full space-y-3 z-10 shadow-shadowNews shadow-black"
+              class="relative rounded-2xl rounded-l-none md:rounded-l-2xl lg:rounded-l-none p-4 h-full space-y-1 lg:space-y-3 z-10 shadow-shadowNews shadow-black"
             >
               <p class="date">23 Kwietnia 2023</p>
-              <p class="text-md font-extralight">
+              <p class="text-sm lg:text-md font-extralight">
                 W związku z polepszającą się pogodą powracają zajęcia jogi na
                 świeżym powietrzu.
               </p>
               <a
                 href="#"
-                class="absolute bottom-5 right-5 block text-sm hover:underline"
+                class="absolute bottom-5 right-5 block text-xs lg:text-sm hover:underline"
                 >Więcej informacji
                 <i class="fa-solid fa-chevron-circle-right text-red-500"></i
               ></a>
             </div>
           </div>
-          <div class="w-5/6 h-56 flex border-2 rounded-2xl z-0">
+          <!-- 2 -->
+          <div class="card w-5/6 h-56 flex border-2 rounded-2xl z-0">
             <img
               src="./images/Sprzęt.jpg"
               alt="yoga"
-              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20"
+              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20 md:hidden lg:block"
             />
 
             <div
-              class="relative rounded-2xl rounded-l-none p-4 h-full space-y-3 z-10 shadow-shadowNews shadow-black"
+              class="relative rounded-2xl rounded-l-none md:rounded-l-2xl lg:rounded-l-none p-4 h-full space-y-1 lg:space-y-3 z-10 shadow-shadowNews shadow-black"
             >
-              <p class="date">23 Kwietnia 2023</p>
-              <p class="text-md font-extralight">
-                Od dzisiaj na naszej siłowni dostępny jest nowy sprzęt od
-                naszego sponsora.
-              </p>
-              <a
-                href="#"
-                class="absolute bottom-5 right-5 block text-sm hover:underline"
-                >Więcej informacji
-                <i class="fa-solid fa-chevron-circle-right text-red-500"></i
-              ></a>
-            </div>
-          </div>
-          <div class="w-5/6 h-56 flex border-2 rounded-2xl z-0">
-            <img
-              src="./images/Fitness.jpg"
-              alt="yoga"
-              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20"
-            />
-
-            <div
-              class="relative rounded-2xl rounded-l-none p-4 h-full space-y-3 z-10 shadow-shadowNews shadow-black"
-            >
-              <p class="date">27 Marca 2023</p>
-              <p class="text-md font-extralight">
-                Zwiększamy liczbę zajęć fitness.
-              </p>
-              <a
-                href="#"
-                class="absolute bottom-5 right-5 block text-sm hover:underline"
-                >Więcej informacji
-                <i class="fa-solid fa-chevron-circle-right text-red-500"></i
-              ></a>
-            </div>
-          </div>
-          <div class="w-5/6 h-56 flex border-2 rounded-2xl z-0">
-            <img
-              src="./images/Zawody.jpg"
-              alt="yoga"
-              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20"
-            />
-
-            <div
-              class="relative rounded-2xl rounded-l-none p-4 h-full space-y-3 z-10 shadow-shadowNews shadow-black"
-            >
-              <p class="date">20 Marca 2023</p>
-              <p class="text-md font-extralight">
-                Już teraz możesz zapisać się na zawody i zmierzyć się z innymi
-                zawodnikami.
-              </p>
-              <a
-                href="#"
-                class="absolute bottom-5 right-5 block text-sm hover:underline"
-                >Więcej informacji
-                <i class="fa-solid fa-chevron-circle-right text-red-500"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- <div class="w-96 h-56 flex">
-            <img
-              src="./images/Sprzęt.jpg"
-              alt="sprzet"
-              class="scale-105 rounded-l-2xl w-44 h-full object-cover shadow-shadowNews border-r-1 border-black"
-            />
-            <div class="p-2 space-y-3 bg-white rounded-r-2xl">
               <p class="date">12 Kwietnia 2023</p>
-              <p class="text-md font-extralight">
+              <p class="text-sm lg:text-md font-extralight">
                 Od dzisiaj na naszej siłowni dostępny jest nowy sprzęt od
                 naszego sponsora.
               </p>
-              <a href="#" class="block text-sm hover:underline"
+              <a
+                href="#"
+                class="absolute bottom-5 right-5 block text-xs lg:text-sm hover:underline"
                 >Więcej informacji
                 <i class="fa-solid fa-chevron-circle-right text-red-500"></i
               ></a>
             </div>
           </div>
-          <div class="w-96 h-56 flex">
+          <!-- 3 -->
+          <div class="card w-5/6 h-56 flex border-2 rounded-2xl z-0">
             <img
               src="./images/Fitness.jpg"
-              alt="fitness"
-              class="scale-105 rounded-l-2xl w-44 h-full object-cover shadow-shadowNews border-r-1 border-black"
+              alt="yoga"
+              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20 md:hidden lg:block"
             />
-            <div class="p-2 space-y-3 bg-white rounded-r-2xl">
+
+            <div
+              class="relative rounded-2xl rounded-l-none md:rounded-l-2xl lg:rounded-l-none p-4 h-full space-y-1 lg:space-y-3 z-10 shadow-shadowNews shadow-black"
+            >
               <p class="date">27 Marca 2023</p>
-              <p class="text-md font-extralight">
+              <p class="text-sm lg:text-md font-extralight">
                 W związku z dużym zainteresowaniem naszymi zajęciami fitness, od
                 dzisiaj oferujemy ich jeszcze więcej.
               </p>
-              <a href="#" class="block text-sm hover:underline"
+              <a
+                href="#"
+                class="absolute bottom-5 right-5 block text-xs lg:text-sm hover:underline"
                 >Więcej informacji
                 <i class="fa-solid fa-chevron-circle-right text-red-500"></i
               ></a>
             </div>
           </div>
-          <div class="w-96 h-56 flex">
+          <!-- 4 -->
+          <div class="card w-5/6 h-56 flex border-2 rounded-2xl z-0">
             <img
               src="./images/Zawody.jpg"
-              alt="zawody"
-              class="scale-105 rounded-l-2xl w-44 h-full object-cover shadow-shadowNews border-r-1 border-black"
+              alt="yoga"
+              class="scale-105 rounded-l-2xl w-2/5 h-full object-cover shadow-shadowNews shadow-black z-20 md:hidden lg:block"
             />
-            <div class="p-2 space-y-3 bg-white rounded-r-2xl">
-              <p class="date">20 Marca 2023</p>
-              <p class="text-md font-extralight">
+
+            <div
+              class="relative rounded-2xl rounded-l-none md:rounded-l-2xl lg:rounded-l-none p-4 h-full space-y-1 lg:space-y-3 z-10 shadow-shadowNews shadow-black"
+            >
+              <p class="date">20 Marca 202</p>
+              <p class="text-sm lg:text-md font-extralight">
                 Już teraz możesz zapisać się na zawody i zmierzyć się z innymi
                 zawodnikami.
               </p>
-              <a href="#" class="block text-sm hover:underline"
+              <a
+                href="#"
+                class="absolute bottom-5 right-5 block text-xs lg:text-sm hover:underline"
                 >Więcej informacji
                 <i class="fa-solid fa-chevron-circle-right text-red-500"></i
               ></a>
             </div>
-          </div> -->
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section
+        class="w-full bg-slate-500 text-white flex items-center justify-center"
+      ></section>
     </main>
   </body>
 </html>
