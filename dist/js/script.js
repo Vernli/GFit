@@ -45,14 +45,37 @@ function navToggle() {
   menu.classList.toggle("hidden");
 }
 
-// Init
-function Init() {
+function InitMobile() {
   menu_btn.addEventListener("click", navToggle);
   button_left.addEventListener("click", showVideo);
   button_right.addEventListener("click", showVideo);
 }
+InitMobile();
 
-const cards = document.querySelector(".cards");
-cards.addEventListener("scroll", (e) => {});
+// Calendar
+const date = new Date();
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-Init();
+const dateInput = document.querySelectorAll("input[type='date']");
+function setTodayDate() {
+  dateInput.forEach((input) => {
+    input.value = `${date.getFullYear()}-${
+      date.getMonth() <= 9 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1
+    }-${date.getDate() <= 9 ? "0" + date.Date() : date.getDate()}`;
+  });
+}
+window.addEventListener("DOMContentLoaded", setTodayDate);
+function renderCalendar() {}
