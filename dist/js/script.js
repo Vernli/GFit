@@ -13,6 +13,7 @@ let current_video = 0;
 // Calendar
 const container = document.querySelector(".calendar-container");
 const dateInput = document.querySelectorAll("input[type='date']");
+
 const todayDate = new Date();
 const date = new Date();
 const months = [
@@ -62,13 +63,6 @@ function navToggle() {
   menu.classList.toggle("hidden");
 }
 
-function InitMobile() {
-  menu_btn.addEventListener("click", navToggle);
-  button_left.addEventListener("click", showVideo);
-  button_right.addEventListener("click", showVideo);
-}
-InitMobile();
-
 function setTodayDate() {
   dateInput.forEach((input) => {
     input.value = `${todayDate.getFullYear()}-${
@@ -81,10 +75,12 @@ function setTodayDate() {
   });
 }
 
-const renderCalendar = () => {
+function renderCalendar(destination) {
   date.setDate(1);
+  const instance = document.querySelector(destination);
+  console.log(instance);
 
-  const monthDays = document.getElementById("days");
+  const monthDays = instance.querySelector(".days");
 
   const lastDay = new Date(
     date.getFullYear(),
@@ -108,9 +104,9 @@ const renderCalendar = () => {
 
   const nextDays = 7 - lastDayIndex - 1;
 
-  document.querySelector("#date h1").innerHTML = months[date.getMonth()];
+  instance.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
-  document.querySelector("#date p").innerHTML = new Date().toDateString();
+  instance.querySelector(".date p").innerHTML = new Date().toDateString();
 
   let days = "";
 
@@ -119,62 +115,95 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
-    if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
-    ) {
-      days += `<div class="active-date">${i}</div>`;
-    } else {
-      days += `<div class="current-date">${i}</div>`;
-    }
+    days += `<div class="current-date">${i}</div>`;
   }
 
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
-};
+}
 
-document.getElementById("prev-month").addEventListener("click", () => {
-  date.setMonth(date.getMonth() - 1);
-  renderCalendar();
-});
+function monthsEvents(destination) {
+  const instance = document.querySelector(destination);
+  instance.querySelector(".prev-month").addEventListener("click", () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar(destination);
+  });
 
-document.getElementById("next-month").addEventListener("click", () => {
-  console.log();
-  date.setMonth(date.getMonth() + 1);
-  renderCalendar();
-});
+  instance.querySelector(".next-month").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar(destination);
+  });
+}
 
-document.getElementById("days").addEventListener("click", (e) => {
-  let month = document.querySelector("#date h1").innerText.toLowerCase();
-  if (e.target.classList.contains("prev-date")) {
-    month = months
-      .indexOf(month.charAt(0).toUpperCase() + month.slice(1))
-      .toString();
-    dateInput[0].value = `${date.getFullYear()}-${
-      month.length <= 1 ? "0" + month : month
-    }-${e.target.innerText}`;
-  } else if (e.target.classList.contains("next-date")) {
-    month = (
-      months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 2
-    ).toString();
-    dateInput[0].value = `${date.getFullYear()}-${
-      month.length <= 1 ? "0" + month : month
-    }-${"0" + e.target.innerText}`;
-  } else {
-    month = (
-      months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 1
-    ).toString();
-    dateInput[0].value = `${date.getFullYear()}-${
-      month.length <= 1 ? "0" + month : month
-    }-${
-      e.target.innerText.length <= 1
-        ? "0" + e.target.innerText
-        : e.target.innerText
-    }`;
-  }
-});
+function changeActiveDate(destination) {
+  const instance = document.querySelector(destination);
 
-setTodayDate();
-renderCalendar();
+  instance.querySelector(".days").addEventListener("click", (e) => {
+    const activeElement = instance.querySelector(".active-date");
+    console.log(activeElement);
+    if (activeElement === null) {
+      e.target.classList.add("active-date");
+    } else {
+      activeElement.classList.remove("active-date");
+      e.target.classList.add("active-date");
+    }
+  });
+}
+
+function updateDateInput(destination) {
+  const instance = document.querySelector(destination);
+  const dateInput = instance.querySelector("input[type='date']");
+
+  instance.querySelector(".days").addEventListener("click", (e) => {
+    let month = instance.querySelector(".date h1").innerText.toLowerCase();
+    if (e.target.classList.contains("prev-date")) {
+      month = months
+        .indexOf(month.charAt(0).toUpperCase() + month.slice(1))
+        .toString();
+      dateInput.value = `${date.getFullYear()}-${
+        month.length <= 1 ? "0" + month : month
+      }-${e.target.innerText}`;
+    } else if (e.target.classList.contains("next-date")) {
+      month = (
+        months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 2
+      ).toString();
+      dateInput.value = `${date.getFullYear()}-${
+        month.length <= 1 ? "0" + month : month
+      }-${"0" + e.target.innerText}`;
+    } else {
+      month = (
+        months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 1
+      ).toString();
+      dateInput.value = `${date.getFullYear()}-${
+        month.length <= 1 ? "0" + month : month
+      }-${
+        e.target.innerText.length <= 1
+          ? "0" + e.target.innerText
+          : e.target.innerText
+      }`;
+    }
+  });
+}
+
+function InitMobile() {
+  menu_btn.addEventListener("click", navToggle);
+  button_left.addEventListener("click", showVideo);
+  button_right.addEventListener("click", showVideo);
+}
+
+function InitCalendar() {
+  setTodayDate();
+  renderCalendar("#offer-one");
+  renderCalendar("#offer-two");
+  monthsEvents("#offer-one");
+  monthsEvents("#offer-two");
+  updateDateInput("#offer-one");
+  updateDateInput("#offer-two");
+  changeActiveDate("#offer-one");
+  changeActiveDate("#offer-two");
+}
+
+InitMobile();
+InitCalendar();

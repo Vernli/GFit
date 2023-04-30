@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  footer a:hover {
+    @apply border-black border-b-2;
+  }
+}
+
 @layer utilities {
   .flex-col-center {
     @apply flex flex-col items-center justify-center;
@@ -33,15 +39,15 @@
   }
 
   .prev-date {
-    @apply text-center cursor-pointer text-gray-400 hover:bg-gray-700;
+    @apply text-center cursor-pointer text-gray-400 hover:bg-gray-700 hover:rounded-lg;
   }
 
   .current-date {
-    @apply text-center cursor-pointer hover:bg-gray-700;
+    @apply text-center cursor-pointer hover:bg-gray-700 hover:rounded-lg;
   }
 
   .active-date {
-    @apply text-center cursor-pointer bg-red-400;
+    @apply text-center cursor-pointer bg-gray-600 rounded-md;
   }
 
   .next-date {
@@ -140,4 +146,9 @@ li {
 
 .card {
   scroll-snap-align: center;
+}
+
+.footer-logo:hover {
+  filter: invert(56%) sepia(27%) saturate(4337%) hue-rotate(323deg)
+    brightness(115%) contrast(93%);
 }
