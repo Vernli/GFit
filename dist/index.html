@@ -558,28 +558,38 @@
                   class="h-6 bg-transparent text-center outline-none border"
                 />
               </div>
-              <!-- <div class="calendar-container">
-                <div class="calendar">
-                  <div class="month">
-                    <i class="fas fa-angle-left prev"></i>
-                    <div class="date">
-                      <h1></h1>
+
+              <div class="w-5/6 border-2 border-white">
+                <div class="h-56">
+                  <div class="flex justify-around items-center bg-red-400">
+                    <i
+                      id="prev-month"
+                      class="fa-solid fa-angle-left cursor-pointer"
+                    ></i>
+                    <div id="date">
+                      <h1 class="text-center"></h1>
                       <p></p>
                     </div>
-                    <i class="fas fa-angle-right next"></i>
+                    <i
+                      id="next-month"
+                      class="fa-solid fa-angle-right cursor-pointer"
+                    ></i>
                   </div>
-                  <div class="weekdays">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
+                  <div
+                    class="text-md flex justify-around border-b-2 border-dashed border-white"
+                  >
+                    <h1>Sun</h1>
+                    <h1>Mon</h1>
+                    <h1>Tue</h1>
+                    <h1>Wed</h1>
+                    <h1>Thu</h1>
+                    <h1>Fri</h1>
+                    <h1>Sat</h1>
                   </div>
-                  <div class="days"></div>
+                  <div id="days" class="grid grid-cols-7"></div>
                 </div>
-              </div> -->
+              </div>
+
               <!-- Dołącz do klubu -->
               <button class="group h-12 w-2/3 bg-red-400 text-lg">
                 <span class="text-white group-hover:scale-110">Kup Karnet</span>

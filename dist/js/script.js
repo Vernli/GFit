@@ -69,7 +69,6 @@ function InitMobile() {
 }
 InitMobile();
 
-// Calendar
 function setTodayDate() {
   dateInput.forEach((input) => {
     input.value = `${todayDate.getFullYear()}-${
@@ -82,11 +81,10 @@ function setTodayDate() {
   });
 }
 
-//
 const renderCalendar = () => {
   date.setDate(1);
 
-  const monthDays = document.querySelector(".days");
+  const monthDays = document.getElementById("days");
 
   const lastDay = new Date(
     date.getFullYear(),
@@ -110,9 +108,9 @@ const renderCalendar = () => {
 
   const nextDays = 7 - lastDayIndex - 1;
 
-  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+  document.querySelector("#date h1").innerHTML = months[date.getMonth()];
 
-  document.querySelector(".date p").innerHTML = new Date().toDateString();
+  document.querySelector("#date p").innerHTML = new Date().toDateString();
 
   let days = "";
 
@@ -125,9 +123,9 @@ const renderCalendar = () => {
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<div class="today">${i}</div>`;
+      days += `<div class="active-date">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div class="current-date">${i}</div>`;
     }
   }
 
@@ -137,18 +135,19 @@ const renderCalendar = () => {
   }
 };
 
-document.querySelector(".prev").addEventListener("click", () => {
+document.getElementById("prev-month").addEventListener("click", () => {
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
 });
 
-document.querySelector(".next").addEventListener("click", () => {
+document.getElementById("next-month").addEventListener("click", () => {
+  console.log();
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
 
-document.querySelector(".days").addEventListener("click", (e) => {
-  let month = document.querySelector(".date h1").innerText.toLowerCase();
+document.getElementById("days").addEventListener("click", (e) => {
+  let month = document.querySelector("#date h1").innerText.toLowerCase();
   if (e.target.classList.contains("prev-date")) {
     month = months
       .indexOf(month.charAt(0).toUpperCase() + month.slice(1))
@@ -176,5 +175,6 @@ document.querySelector(".days").addEventListener("click", (e) => {
     }`;
   }
 });
+
 setTodayDate();
 renderCalendar();
