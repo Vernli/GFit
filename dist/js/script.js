@@ -137,19 +137,45 @@ function monthsEvents(destination) {
   });
 }
 
+function isDate(element) {
+  return (
+    element.contains("current-date") ||
+    element.contains("prev-date") ||
+    element.contains("next-date")
+  );
+}
+
 function changeActiveDate(destination) {
   const instance = document.querySelector(destination);
 
   instance.querySelector(".days").addEventListener("click", (e) => {
-    const activeElement = instance.querySelector(".active-date");
-    console.log(activeElement);
-    if (activeElement === null) {
-      e.target.classList.add("active-date");
-    } else {
-      activeElement.classList.remove("active-date");
-      e.target.classList.add("active-date");
+    const targetClassList = e.target.classList;
+
+    if (isDate(targetClassList)) {
+      const activeElement = instance.querySelector(".active-date");
+      if (activeElement === null) {
+        targetClassList.add("active-date");
+      } else {
+        activeElement.classList.remove("active-date");
+        targetClassList.add("active-date");
+      }
     }
   });
+}
+
+function showDateAlert() {
+  const alert = document.querySelector(".alert");
+  alert.classList.remove("hidden");
+
+  setTimeout(() => alert.classList.add("hidden"), 3000);
+}
+
+function isValidDate(date) {
+  let today = new Date();
+  today = today.toISOString().split("T")[0];
+  if (date < today) {
+    showDateAlert();
+  }
 }
 
 function updateDateInput(destination) {
@@ -158,31 +184,37 @@ function updateDateInput(destination) {
 
   instance.querySelector(".days").addEventListener("click", (e) => {
     let month = instance.querySelector(".date h1").innerText.toLowerCase();
-    if (e.target.classList.contains("prev-date")) {
-      month = months
-        .indexOf(month.charAt(0).toUpperCase() + month.slice(1))
-        .toString();
-      dateInput.value = `${date.getFullYear()}-${
-        month.length <= 1 ? "0" + month : month
-      }-${e.target.innerText}`;
-    } else if (e.target.classList.contains("next-date")) {
-      month = (
-        months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 2
-      ).toString();
-      dateInput.value = `${date.getFullYear()}-${
-        month.length <= 1 ? "0" + month : month
-      }-${"0" + e.target.innerText}`;
-    } else {
-      month = (
-        months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 1
-      ).toString();
-      dateInput.value = `${date.getFullYear()}-${
-        month.length <= 1 ? "0" + month : month
-      }-${
-        e.target.innerText.length <= 1
-          ? "0" + e.target.innerText
-          : e.target.innerText
-      }`;
+    const targetClassList = e.target.classList;
+    // Check is date exist
+    if (isDate(targetClassList)) {
+      if (targetClassList.contains("prev-date")) {
+        month = months
+          .indexOf(month.charAt(0).toUpperCase() + month.slice(1))
+          .toString();
+        dateInput.value = `${date.getFullYear()}-${
+          month.length <= 1 ? "0" + month : month
+        }-${e.target.innerText}`;
+        showDateAlert();
+      } else if (targetClassList.contains("next-date")) {
+        month = (
+          months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 2
+        ).toString();
+        dateInput.value = `${date.getFullYear()}-${
+          month.length <= 1 ? "0" + month : month
+        }-${"0" + e.target.innerText}`;
+      } else {
+        month = (
+          months.indexOf(month.charAt(0).toUpperCase() + month.slice(1)) + 1
+        ).toString();
+        dateInput.value = `${date.getFullYear()}-${
+          month.length <= 1 ? "0" + month : month
+        }-${
+          e.target.innerText.length <= 1
+            ? "0" + e.target.innerText
+            : e.target.innerText
+        }`;
+        isValidDate(dateInput.value);
+      }
     }
   });
 }
