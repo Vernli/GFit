@@ -488,14 +488,17 @@
       <!-- Offers -->
       <section
         id="offers-statement"
-        class="relative w-full bg-[#00171f] h-[100vh] flex justify-center"
+        class="relative w-full bg-[#00171f] flex justify-center"
       >
         <div class="offer-card my-10 container text-white">
-          <div id="offers" class="flex items-center justify-center reveal">
+          <div
+            id="offers"
+            class="flex flex-col md:flex-row items-center justify-center md:reveal my-2"
+          >
             <!-- Karnet Open -->
             <div
               id="offer-one"
-              class="scale-x-105 w-1/4 border-l-2 rounded-l-xl border-white flex border-r flex-col space-y-2 mr-5"
+              class="scale-90 md:scale-105 flex flex-col space-y-2 w-full md:w-1/4 border-2 rounded-2xl md:rounded-none md:border-0 md:border-r md:border-l-2 md:rounded-l-xl md:border-white md:mr-5"
             >
               <div class="p-6 space-y-1">
                 <h3
@@ -554,7 +557,7 @@
               </div>
 
               <div
-                class="relative flex flex-col justify-center items-center p-3 space-y-3"
+                class="relative flex flex-col justify-center items-center p-2 space-y-3"
               >
                 <div class="alert absolute top-0 hidden">
                   Proszę podać prawidłową datę
@@ -572,8 +575,8 @@
                     disabled
                   />
                 </div>
-
-                <div class="w-5/6 border-2 border-white">
+                <!-- Calendar -->
+                <div class="w-full md:w-5/6 border-2 border-white">
                   <div class="h-60">
                     <div class="flex justify-around items-center bg-red-400">
                       <i
@@ -589,15 +592,15 @@
                     </div>
                     <div class="p-2">
                       <div
-                        class="text-md flex justify-around border-b-2 border-dashed border-white"
+                        class="text-sm flex justify-around border-b-2 border-dashed border-white"
                       >
-                        <h1>Sun</h1>
-                        <h1>Mon</h1>
-                        <h1>Tue</h1>
-                        <h1>Wed</h1>
-                        <h1>Thu</h1>
-                        <h1>Fri</h1>
-                        <h1>Sat</h1>
+                        <h1>N</h1>
+                        <h1>P</h1>
+                        <h1>W</h1>
+                        <h1>Ś</h1>
+                        <h1>C</h1>
+                        <h1>Pt</h1>
+                        <h1>S</h1>
                       </div>
                       <div class="days grid grid-cols-7 mt-1"></div>
                     </div>
@@ -615,7 +618,7 @@
             <!-- Karnet Pro -->
             <div
               id="offer-two"
-              class="scale-x-105 w-1/4 border-r-2 rounded-r-xl border-white border-l flex flex-col space-y-2 ml-5 active"
+              class="scale-90 md:scale-105 flex flex-col space-y-2 w-full md:w-1/4 border-2 rounded-2xl md:rounded-none md:border-0 md:border-l md:border-r-2 md:rounded-r-xl md:border-white md:ml-5"
             >
               <div class="p-6 space-y-1">
                 <h3
@@ -693,7 +696,8 @@
                   />
                 </div>
 
-                <div class="w-5/6 border-2 border-white">
+                <!-- Calendar -->
+                <div class="w-full md:w-5/6 border-2 border-white">
                   <div class="h-60">
                     <div class="flex justify-around items-center bg-gray-400">
                       <i
@@ -709,15 +713,15 @@
                     </div>
                     <div class="p-2">
                       <div
-                        class="text-md flex justify-around border-b-2 border-dashed border-white"
+                        class="text-sm flex justify-around border-b-2 border-dashed border-white"
                       >
-                        <h1>Sun</h1>
-                        <h1>Mon</h1>
-                        <h1>Tue</h1>
-                        <h1>Wed</h1>
-                        <h1>Thu</h1>
-                        <h1>Fri</h1>
-                        <h1>Sat</h1>
+                        <h1>N</h1>
+                        <h1>P</h1>
+                        <h1>W</h1>
+                        <h1>Ś</h1>
+                        <h1>C</h1>
+                        <h1>Pt</h1>
+                        <h1>S</h1>
                       </div>
 
                       <div class="days grid grid-cols-7 mt-1">
@@ -774,17 +778,23 @@
             ></a>
           </div>
         </div>
-        <div class="bg-white space-x-4 p-2">
+        <div class="bg-white space-x-2 p-2">
           <a href="" class="hover:text-red-400">Lokalizacja</a>
           <a href="" class="hover:text-red-400">Cennik</a>
         </div>
-        <div class="bg-white space-x-4 p-2">
-          <a href="" class="hover:text-red-400">FAQ</a>
-          <a href="" class="hover:text-red-400">Regulamin</a>
-          <a href="" class="hover:text-red-400">Polityka Cookies</a>
-          <a href="" class="hover:text-red-400">Polityka prywatności</a>
-          <a href="" class="hover:text-red-400">Zasady przetwarzania danych</a>
-          <a href="" class="hover:text-red-400">Regulamin trenera</a>
+        <div class="bg-white space-x-2 p-2">
+          <ul class="flex flex-col md:flex-row md:space-x-2">
+            <li><a href="" class="hover:text-red-400">FAQ</a></li>
+            <li><a href="" class="hover:text-red-400">Regulamin</a></li>
+            <li><a href="" class="hover:text-red-400">Polityka Cookies</a></li>
+            <li>
+              <a href="" class="hover:text-red-400">Polityka prywatności</a>
+            </li>
+            <li>
+              <a href="" class="hover:text-red-400">Przetwarzanie danych</a>
+            </li>
+            <li><a href="" class="hover:text-red-400">Regulamin trenera</a></li>
+          </ul>
         </div>
         <div class="bg-white text-sm p-2">Copyright 2023 by GFit</div>
       </div>

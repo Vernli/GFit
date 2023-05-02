@@ -58,7 +58,6 @@
     @apply text-xs text-red-500 mb-1;
   }
 }
-
 body {
   @apply font-roboto;
 }
