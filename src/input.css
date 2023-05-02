@@ -152,6 +152,15 @@ li {
   scroll-snap-align: center;
 }
 
+.reveal {
+  @apply relative translate-y-24 opacity-100;
+  transition: all 1s linear;
+}
+
+.reveal.show {
+  @apply translate-y-0 opacity-100;
+}
+
 .footer-logo:hover {
   filter: invert(56%) sepia(27%) saturate(4337%) hue-rotate(323deg)
     brightness(115%) contrast(93%);

@@ -381,11 +381,11 @@
     </section>
 
     <main>
+      <!-- Cards -->
       <section id="news" class="w-full p-10 space-y-5 overflow-hidden">
         <h1 class="text-4xl text-center md:text-left text-black tracking-wide">
           Aktualności
         </h1>
-        <!-- Cards -->
         <div class="cards md:grid md:grid-cols-4 gap-2 place-items-center">
           <!-- 1 -->
           <div class="card w-5/6 h-56 flex border-2 rounded-2xl z-0 active">
@@ -485,252 +485,265 @@
           </div>
         </div>
       </section>
-
-      <section id="offer" class="bg-[#00171f] flex justify-center">
-        <div
-          class="offer-card relative my-36 container text-white flex items-center justify-center space-x-10"
-        >
-          <!-- Karnet Open -->
-          <div
-            id="offer-one"
-            class="w-1/4 border-l-2 rounded-l-xl border-white flex border-r flex-col space-y-2"
-          >
-            <div class="p-6 space-y-1">
-              <h3
-                class="pb-2 uppercase text-center text-5xl font-medium text-red-400"
-              >
-                Karnet Open
-              </h3>
-              <div class="flex flex-col">
-                <label class="text-xs tracking-wide"
-                  >Okres trwania karnetu</label
-                >
-                <select
-                  name="karnet"
-                  id="karnet"
-                  class="outline-none text-md text-center w-full h-12 bg-transparent border text-white"
-                >
-                  <option value="k24h">Karnet 24h</option>
-                  <option value="k7d">Karnet 7-DAY</option>
-                  <option value="k6m">Karnet 6-mcy</option>
-                  <option value="k12m">Karnet 12-mcy</option>
-                </select>
-              </div>
-              <h3 class="text-center text-4xl font-semibold tracking-wider p-2">
-                34.99 PLN
-              </h3>
-            </div>
+      <!-- Offers -->
+      <section
+        id="offers-statement"
+        class="relative w-full bg-[#00171f] h-[100vh] flex justify-center"
+      >
+        <div class="offer-card my-10 container text-white">
+          <div id="offers" class="flex items-center justify-center reveal">
+            <!-- Karnet Open -->
             <div
-              class="font-light text-xl py-2 flex items-center justify-center bg-red-400 text-black text-opacity-90"
+              id="offer-one"
+              class="scale-x-105 w-1/4 border-l-2 rounded-l-xl border-white flex border-r flex-col space-y-2 mr-5"
             >
-              <ul class="w-full p-3 font-light">
-                <li class="flex justify-between py-1">
-                  Opłata wpisowa:
-                  <span class="font-bold">NIE</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Nielimitowany dostęp 24H:
-                  <span class="font-bold">TAK</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Zajęcia grupowe w cenie:
-                  <span class="font-bold">TAK</span>
-                </li>
-
-                <li class="flex justify-between py-1">
-                  Możliwość zamrożenia karnetu:
-                  <span class="font-bold">NIE</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Strefa VIP:
-                  <span class="font-bold">NIE</span>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="relative flex flex-col justify-center items-center p-3 space-y-3"
-            >
-              <div class="alert absolute top-0 hidden">
-                Proszę podać prawidłową datę
-              </div>
-              <div class="relative flex flex-col w-2/3">
-                <label class="text-xs tracking-wider font-bold"
-                  >Start karnetu</label
+              <div class="p-6 space-y-1">
+                <h3
+                  class="pb-2 uppercase text-center text-5xl font-medium text-red-400"
                 >
-
-                <input
-                  type="date"
-                  name=""
-                  id=""
-                  class="h-6 bg-transparent text-center outline-none border"
-                  disabled
-                />
-              </div>
-
-              <div class="w-5/6 border-2 border-white">
-                <div class="h-60">
-                  <div class="flex justify-around items-center bg-red-400">
-                    <i
-                      class="prev-month fa-solid fa-angle-left cursor-pointer"
-                    ></i>
-                    <div class="date">
-                      <h1 class="text-center"></h1>
-                      <p></p>
-                    </div>
-                    <i
-                      class="next-month fa-solid fa-angle-right cursor-pointer"
-                    ></i>
-                  </div>
-                  <div class="p-2">
-                    <div
-                      class="text-md flex justify-around border-b-2 border-dashed border-white"
-                    >
-                      <h1>Sun</h1>
-                      <h1>Mon</h1>
-                      <h1>Tue</h1>
-                      <h1>Wed</h1>
-                      <h1>Thu</h1>
-                      <h1>Fri</h1>
-                      <h1>Sat</h1>
-                    </div>
-                    <div class="days grid grid-cols-7 mt-1"></div>
-                  </div>
+                  Karnet Open
+                </h3>
+                <div class="flex flex-col">
+                  <label class="text-xs tracking-wide"
+                    >Okres trwania karnetu</label
+                  >
+                  <select
+                    name=""
+                    id="select-open"
+                    class="outline-none text-md text-center w-full h-12 bg-transparent border text-white"
+                  >
+                    <option value="k24h">Karnet 24h</option>
+                    <option value="k7d">Karnet 7-DAY</option>
+                    <option value="k1m">Karnet 1-mc</option>
+                    <option value="k6m">Karnet 6-mc</option>
+                    <option value="k12m">Karnet 12-mc</option>
+                  </select>
                 </div>
+                <h3
+                  class="price text-center text-4xl font-semibold tracking-wider p-2"
+                >
+                  34.99 PLN
+                </h3>
               </div>
-
-              <!-- Dołącz do klubu -->
-              <button class="group h-12 w-2/3 bg-red-400 text-lg">
-                <span class="text-white group-hover:scale-110">Kup Karnet</span>
-              </button>
-            </div>
-          </div>
-          <!-- Karnet Pro -->
-          <div
-            id="offer-two"
-            class="w-1/4 border-r-2 rounded-r-xl border-white border-l flex flex-col space-y-2"
-          >
-            <div class="p-6 space-y-1">
-              <h3
-                class="pb-2 uppercase text-center text-5xl font-medium text-gray-400"
+              <div
+                class="font-light text-xl py-2 flex items-center justify-center bg-red-400 text-black text-opacity-90"
               >
-                Karnet Pro
-              </h3>
-              <div class="flex flex-col">
-                <label class="text-xs tracking-wide"
-                  >Okres trwania karnetu</label
-                >
-                <select
-                  name="karnet"
-                  id="karnet"
-                  class="outline-none text-md text-center w-full h-12 bg-transparent border text-white"
-                >
-                  <option value="k24h">Karnet 24h</option>
-                  <option value="k7d">Karnet 7-DAY</option>
-                  <option value="k6m">Karnet 6-mcy</option>
-                  <option value="k12m">Karnet 12-mcy</option>
-                </select>
-              </div>
-              <h3 class="text-center text-4xl font-semibold tracking-wider p-2">
-                34.99 PLN
-              </h3>
-            </div>
-            <div
-              class="font-light text-xl py-2 flex items-center justify-center bg-gray-400 text-black text-opacity-90"
-            >
-              <ul class="w-full p-3 font-light">
-                <li class="flex justify-between py-1">
-                  Opłata wpisowa:
-                  <span class="font-bold">NIE</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Nielimitowany dostęp 24H:
-                  <span class="font-bold">TAK</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Zajęcia grupowe w cenie:
-                  <span class="font-bold">TAK</span>
-                </li>
+                <ul class="benefits w-full p-3 font-light">
+                  <li class="flex justify-between py-1">
+                    Opłata wpisowa:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Nielimitowany dostęp 24H:
+                    <span class="font-bold">TAK</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Zajęcia grupowe w cenie:
+                    <span class="font-bold">TAK</span>
+                  </li>
 
-                <li class="flex justify-between py-1">
-                  Możliwość zamrożenia karnetu:
-                  <span class="font-bold">NIE</span>
-                </li>
-                <li class="flex justify-between py-1">
-                  Strefa VIP:
-                  <span class="font-bold">NIE</span>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="relative flex flex-col justify-center items-center p-3 space-y-3"
-            >
-              <div class="alert absolute top-0 hidden">
-                Proszę podać prawidłową datę
+                  <li class="flex justify-between py-1">
+                    Możliwość zamrożenia karnetu:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Strefa VIP:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                </ul>
               </div>
 
-              <div class="relative flex flex-col w-2/3">
-                <label class="text-xs tracking-wider font-bold"
-                  >Start karnetu</label
-                >
-                <input
-                  type="date"
-                  name=""
-                  id=""
-                  class="h-6 bg-transparent text-center outline-none border"
-                  disabled
-                />
-              </div>
+              <div
+                class="relative flex flex-col justify-center items-center p-3 space-y-3"
+              >
+                <div class="alert absolute top-0 hidden">
+                  Proszę podać prawidłową datę
+                </div>
+                <div class="relative flex flex-col w-2/3">
+                  <label class="text-xs tracking-wider font-bold"
+                    >Start karnetu</label
+                  >
 
-              <div class="w-5/6 border-2 border-white">
-                <div class="h-60">
-                  <div class="flex justify-around items-center bg-gray-400">
-                    <i
-                      class="prev-month fa-solid fa-angle-left cursor-pointer"
-                    ></i>
-                    <div class="date">
-                      <h1 class="text-center"></h1>
-                      <p></p>
+                  <input
+                    type="date"
+                    name=""
+                    id=""
+                    class="h-6 bg-transparent text-center outline-none border"
+                    disabled
+                  />
+                </div>
+
+                <div class="w-5/6 border-2 border-white">
+                  <div class="h-60">
+                    <div class="flex justify-around items-center bg-red-400">
+                      <i
+                        class="prev-month fa-solid fa-angle-left cursor-pointer"
+                      ></i>
+                      <div class="date">
+                        <h1 class="text-center"></h1>
+                        <p></p>
+                      </div>
+                      <i
+                        class="next-month fa-solid fa-angle-right cursor-pointer"
+                      ></i>
                     </div>
-                    <i
-                      class="next-month fa-solid fa-angle-right cursor-pointer"
-                    ></i>
-                  </div>
-                  <div class="p-2">
-                    <div
-                      class="text-md flex justify-around border-b-2 border-dashed border-white"
-                    >
-                      <h1>Sun</h1>
-                      <h1>Mon</h1>
-                      <h1>Tue</h1>
-                      <h1>Wed</h1>
-                      <h1>Thu</h1>
-                      <h1>Fri</h1>
-                      <h1>Sat</h1>
-                    </div>
-
-                    <div class="days grid grid-cols-7 mt-1">
-                      <div class="prev-date"></div>
-                      <div class="active-date"></div>
-                      <div class="next-date"></div>
-                      <div class="current-date"></div>
+                    <div class="p-2">
+                      <div
+                        class="text-md flex justify-around border-b-2 border-dashed border-white"
+                      >
+                        <h1>Sun</h1>
+                        <h1>Mon</h1>
+                        <h1>Tue</h1>
+                        <h1>Wed</h1>
+                        <h1>Thu</h1>
+                        <h1>Fri</h1>
+                        <h1>Sat</h1>
+                      </div>
+                      <div class="days grid grid-cols-7 mt-1"></div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Dołącz do klubu -->
+                <button class="group h-12 w-2/3 bg-red-400 text-lg">
+                  <span class="text-white group-hover:scale-110"
+                    >Kup Karnet</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Karnet Pro -->
+            <div
+              id="offer-two"
+              class="scale-x-105 w-1/4 border-r-2 rounded-r-xl border-white border-l flex flex-col space-y-2 ml-5 active"
+            >
+              <div class="p-6 space-y-1">
+                <h3
+                  class="pb-2 uppercase text-center text-5xl font-medium text-gray-400"
+                >
+                  Karnet <br />Pro
+                </h3>
+                <div class="flex flex-col">
+                  <label class="text-xs tracking-wide"
+                    >Okres trwania karnetu</label
+                  >
+                  <select
+                    name=""
+                    id="select-pro"
+                    class="outline-none text-md text-center w-full h-12 bg-transparent border text-white"
+                  >
+                    <option value="k24h">Karnet 24h</option>
+                    <option value="k7d">Karnet 7-DAY</option>
+                    <option value="k1m">Karnet 1-mc</option>
+                    <option value="k6m">Karnet 6-mc</option>
+                    <option value="k12m">Karnet 12-mc</option>
+                  </select>
+                </div>
+                <h3
+                  class="price text-center text-4xl font-semibold tracking-wider p-2"
+                >
+                  69.99 PLN
+                </h3>
+              </div>
+              <div
+                class="font-light text-xl py-2 flex items-center justify-center bg-gray-400 text-black text-opacity-90"
+              >
+                <ul class="benefits w-full p-3 font-light">
+                  <li class="flex justify-between py-1">
+                    Opłata wpisowa:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Nielimitowany dostęp 24H:
+                    <span class="font-bold">TAK</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Zajęcia grupowe w cenie:
+                    <span class="font-bold">TAK</span>
+                  </li>
+
+                  <li class="flex justify-between py-1">
+                    Możliwość zamrożenia karnetu:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                  <li class="flex justify-between py-1">
+                    Strefa VIP:
+                    <span class="font-bold">NIE</span>
+                  </li>
+                </ul>
               </div>
 
-              <!-- Dołącz do klubu -->
-              <button class="group h-12 w-2/3 bg-gray-400 text-lg">
-                <span class="text-white group-hover:scale-110">Kup Karnet</span>
-              </button>
+              <div
+                class="relative flex flex-col justify-center items-center p-3 space-y-3 z-0"
+              >
+                <div class="alert absolute top-0 hidden">
+                  Proszę podać prawidłową datę
+                </div>
+
+                <div class="flex flex-col w-2/3">
+                  <label class="text-xs tracking-wider font-bold"
+                    >Start karnetu</label
+                  >
+                  <input
+                    type="date"
+                    name=""
+                    id=""
+                    class="h-6 bg-transparent text-center outline-none border"
+                    disabled
+                  />
+                </div>
+
+                <div class="w-5/6 border-2 border-white">
+                  <div class="h-60">
+                    <div class="flex justify-around items-center bg-gray-400">
+                      <i
+                        class="prev-month fa-solid fa-angle-left cursor-pointer"
+                      ></i>
+                      <div class="date">
+                        <h1 class="text-center"></h1>
+                        <p></p>
+                      </div>
+                      <i
+                        class="next-month fa-solid fa-angle-right cursor-pointer"
+                      ></i>
+                    </div>
+                    <div class="p-2">
+                      <div
+                        class="text-md flex justify-around border-b-2 border-dashed border-white"
+                      >
+                        <h1>Sun</h1>
+                        <h1>Mon</h1>
+                        <h1>Tue</h1>
+                        <h1>Wed</h1>
+                        <h1>Thu</h1>
+                        <h1>Fri</h1>
+                        <h1>Sat</h1>
+                      </div>
+
+                      <div class="days grid grid-cols-7 mt-1">
+                        <div class="prev-date"></div>
+                        <div class="active-date"></div>
+                        <div class="next-date"></div>
+                        <div class="current-date"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dołącz do klubu -->
+                <button class="group h-12 w-2/3 bg-gray-400 text-lg">
+                  <span class="text-white group-hover:scale-110"
+                    >Kup Karnet</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="w-full bg-[#00171f] flex flex-col p-2">
+      <div class="w-full bg-[#00171f] flex flex-col px-4">
         <div
           class="w-full h-16 bg-white flex justify-between p-4 border-t-2 rounded-t-2xl"
         >
