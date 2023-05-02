@@ -27,6 +27,46 @@
     <title>GFit - Klub Fitness i Siłownia 24/7</title>
   </head>
   <body>
+    <section
+      class="w-screen h-screen absolute z-50 bg-gray-800 bg-opacity-90 flex items-center justify-center"
+    >
+      <div
+        class="relative w-1/4 h-1/4 bg-white border-2 border-black rounded-xl p-10"
+      >
+        <div class="absolute top-5 right-5">
+          <i class="fa-solid fa-remove fa-2x text-red-400"></i>
+        </div>
+        <div class="flex items-center justify-center h-full overflow-hidden">
+          <form
+            action=""
+            class="flex flex-col justify-center text-red-400 font-medium"
+          >
+            <label for="login">E-mail</label>
+            <input
+              type="email"
+              name="login"
+              id=""
+              class="border-2"
+              placeholder="Wprowadź swój e-mail"
+            />
+            <label for="password">Hasło</label>
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="border-2"
+              placeholder="*******"
+            />
+            <input
+              type="submit"
+              value="Zaloguj"
+              class="bg-red-400 text-white mt-2 rounded-xl text-lg border-black border"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- Navbar -->
     <!--ToDo Make it fixed when is out of viewport-->
     <nav id="navbar">
@@ -97,21 +137,20 @@
           >
             <!-- Log In -->
             <button
-              class="group relative h-7 lg:h-10 w-24 lg:w-36 overflow-hidden border border-black rounded-full bg-white text-sm lg:text-lg shadow hover:shadow-lg"
+              class="group h-7 lg:h-10 w-24 lg:w-36 overflow-hidden border border-black rounded-full bg-white text-sm lg:text-lg"
             >
-              <div
-                class="absolute inset-0 h-0 bg-red-300 tranistiion-all duration-[500ms] ease group-hover:h-full"
-              ></div>
-              <span class="relative text-gray-500">Zaloguj się</span>
+              <span
+                class="text-gray-500 md:group-hover:text-xl transition-all duration-300"
+                >Zaloguj się</span
+              >
             </button>
+
             <!-- Dołącz do klubu -->
             <button
-              class="group relative hidden md:block h-7 lg:h-10 w-24 lg:w-40 overflow-hidden border border-black rounded-full bg-red-400 text-sm lg:text-lg shadow hover:shadow-lg;"
+              class="group hidden md:block h-7 lg:h-10 w-24 lg:w-40 overflow-hidden border border-black rounded-full bg-red-300 text-sm lg:text-lg ;"
             >
-              <div
-                class="absolute inset-0 h-0 bg-red-300 tranistiion-all duration-[500ms] ease group-hover:h-full"
-              ></div>
-              <span class="relative text-white group-hover:text-gray-500"
+              <span
+                class="text-gray-500 md:group-hover:text-xl transition-all duration-300"
                 >Kup Karnet</span
               >
             </button>
@@ -379,7 +418,6 @@
         </div>
       </div>
     </section>
-
     <main>
       <!-- Cards -->
       <section id="news" class="w-full p-10 space-y-5 overflow-hidden">
@@ -493,7 +531,7 @@
         <div class="offer-card my-10 container text-white">
           <div
             id="offers"
-            class="flex flex-col md:flex-row items-center justify-center md:reveal my-2"
+            class="flex flex-col md:flex-row items-center justify-center reveal my-2"
           >
             <!-- Karnet Open -->
             <div
