@@ -2,7 +2,8 @@
   "name": "gfit-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css",
     "minify": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css --minify",
