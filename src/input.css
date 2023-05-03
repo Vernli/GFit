@@ -23,7 +23,7 @@
     background: rgba(0, 0, 0, 0.3);
   }
   .btn-wrap {
-    @apply absolute left-0 bottom-[15vh] right-0 h-1/4 w-full opacity-100 flex-row-center duration-500;
+    @apply absolute left-0 bottom-[15vh] md:bottom-[5vh] mdlg:bottom-[15vh] right-0 h-1/4 w-full opacity-100 flex-row-center duration-500;
   }
 
   .btn-hero {

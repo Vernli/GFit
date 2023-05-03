@@ -15,12 +15,18 @@ let current_video = 0;
 
 // Login Modal
 loginBtn.addEventListener("click", () => {
-  loginModal.classList.toggle("hidden");
+  loginModal.classList.remove("hidden");
 });
 
 loginModal.addEventListener("click", (e) => {
   if (e.target.id === "close") {
     loginModal.classList.add("hidden");
+    e.target.parentElement.parentElement.querySelector(
+      'input[type="email"]'
+    ).value = "";
+    e.target.parentElement.parentElement.querySelector(
+      'input[type="password"]'
+    ).value = "";
   }
 });
 

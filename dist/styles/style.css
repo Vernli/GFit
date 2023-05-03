@@ -535,6 +535,12 @@ footer a:hover {
   }
 }
 
+@media (min-width: 1080px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
@@ -580,6 +586,18 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 920px) {
+  .btn-wrap {
+    bottom: 5vh;
+  }
+}
+
+@media (min-width: 1080px) {
+  .btn-wrap {
+    bottom: 15vh;
+  }
 }
 
 .btn-hero {

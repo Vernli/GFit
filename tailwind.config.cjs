@@ -6,6 +6,7 @@ module.exports = {
       screens: {
         sm: "375px",
         md: "920px",
+        mdlg: "1080px",
         lg: "1280px",
         landscape: "(orientation: landscape)",
       },
