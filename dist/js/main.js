@@ -2,15 +2,39 @@ import Calendar from "./calendar.js";
 
 // Navbar
 const menu_btn = document.getElementById("menu-btn");
-const hero_btn = document.querySelectorAll(".btn-hero");
+const loginBtn = document.getElementById("loginBtn");
+const loginModal = document.getElementById("login");
+const loginSubmitBtn = document.getElementById("loginSubmitBtn");
 const menu = document.getElementById("menu");
 
 // Video
-const videocontent = document.querySelectorAll(".video-content");
 const videos = document.querySelectorAll(".video");
 const button_left = document.getElementById("prev");
 const button_right = document.getElementById("next");
 let current_video = 0;
+
+// Login Modal
+loginBtn.addEventListener("click", () => {
+  loginModal.classList.toggle("hidden");
+});
+
+loginModal.addEventListener("click", (e) => {
+  if (e.target.id === "close") {
+    loginModal.classList.add("hidden");
+  }
+});
+
+loginSubmitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const login = document.querySelector('input[type="email"]');
+  const password = document.querySelector('input[type="password"]');
+  login.classList.add("invalid");
+  password.classList.add("invalid");
+  setTimeout(() => {
+    login.classList.remove("invalid");
+    password.classList.remove("invalid");
+  }, 1000);
+});
 
 // Mobile
 function showVideo(e) {
@@ -73,9 +97,6 @@ function reveal() {
   }
 }
 window.addEventListener("scroll", reveal);
-
-InitMobile();
-InitCalendar();
 
 function BenefitList(price, freeze, vip) {
   this.price = price.toUpperCase();
@@ -159,3 +180,6 @@ document
 document
   .querySelector("#select-pro")
   .addEventListener("change", changeOfferInfo);
+
+InitMobile();
+InitCalendar();
