@@ -1,4 +1,5 @@
 node_modules
 src
 .vscode
-tailwind.config.cjs
+tailwind.config.js
+webpack.config.js

@@ -2,17 +2,19 @@
   "name": "gfit-web",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css",
     "minify": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css --minify",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css --watch"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/styles/style.css --watch",
+    "build-js": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.2.6"
+    "tailwindcss": "^3.2.6",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2"
   }
 }
